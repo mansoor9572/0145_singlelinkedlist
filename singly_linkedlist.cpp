@@ -169,17 +169,30 @@ int main()
         }
         break;
 
-        case '3': {
-            mhs.traverse();
-        }
-        break;
+    case '3':
+    {
+        mhs.traverse();
+    }
+    break;
 
-        case '4': {
-            if (mhs.listEmpty()) {
-                cout << "\nList kosong\n";
-                break;
-            }
-            Node *previous, *current;
+    case '4':
+    {
+        if (mhs.listEmpty())
+        {
+            cout << "\nList kosong\n";
+            break;
+        }
+        Node *previous, *current;
+        cout << endl
+             << "Masukan no mahasiswa yang dicari: ";
+        cin >> nim;
+        if (mhs.Search(nim, &previous, &current) == false)
             cout << endl
-                 << "Masukan no mahasiswa yang dicari: ";
-            cin >> nim;
+                 << "Data tidak ditemukan" << endl;
+        else
+        {
+            cout << endl
+                 << "Data ditemukan" << endl;
+            cout << "\nNo mahasiswa: " << current->noMhs << endl;
+            cout << "\n";
+        }
