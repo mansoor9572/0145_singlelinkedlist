@@ -109,3 +109,16 @@ int main() {
         cout << "5. Keluar" << endl;
         cout << endl
              << "Masukan pilihan (1-5): ";
+
+             cin >> ch;
+             switch (ch) {
+             case '1':
+                 mhs.addNode();
+                 break;
+     
+             case '2': {
+                 if (mhs.listEmpty()) {
+                     cout << endl
+                          << "List kosong" << endl;
+                     break;
+                 }
