@@ -168,3 +168,18 @@ int main()
                      << "Data dengan nomor mahasiswa " << nim << " berhasil dihapus" << endl;
         }
         break;
+
+        case '3': {
+            mhs.traverse();
+        }
+        break;
+
+        case '4': {
+            if (mhs.listEmpty()) {
+                cout << "\nList kosong\n";
+                break;
+            }
+            Node *previous, *current;
+            cout << endl
+                 << "Masukan no mahasiswa yang dicari: ";
+            cin >> nim;
