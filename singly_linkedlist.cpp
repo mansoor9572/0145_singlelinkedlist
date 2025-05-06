@@ -196,3 +196,20 @@ int main()
             cout << "\nNo mahasiswa: " << current->noMhs << endl;
             cout << "\n";
         }
+    }
+    break;
+
+    case '5':
+    {
+        exit(0);
+    }
+    break;
+
+    default:
+    {
+        cout << "Pilihan salah!" << endl;
+    }
+    break;
+    }
+}
+}
